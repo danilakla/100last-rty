@@ -45,5 +45,3 @@ int date::count1 = 0;
 
 bool date::r = true;
 
-
-t 
