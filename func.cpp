@@ -199,6 +199,7 @@ void  func::changTheData()
 {
 	int choice;
 	print();
+	
 	cout << "номер студента:";
 	cin >> choice;
 	cout << endl;
@@ -209,6 +210,7 @@ void  func::changTheData()
 }
 void func::sortDATE() {
 	SORTsubmenu();
+	system("cls");
 }
 
 
@@ -400,8 +402,8 @@ void func::findOnCourse()
 void func::findOnGroup()
 {
 	string group;
-	cout << " введите имя" << endl;
-	cout << "имя:";
+	cout << " введите группу" << endl;
+	cout << "группу:";
 	cin >> group;
 	cout << "список найденных студентов" << endl << endl;
 	for (int i = 0; i < date::_date.size(); i++)
@@ -491,7 +493,7 @@ void func::findOnAllParm()
 void  func::submenu()
 {
 	infMenu();
-	cout << "выбирите вариант:";
+	cout << "выберите вариант:";
 	int a=choice();
 	system("cls");
 	switch (a)
@@ -924,7 +926,7 @@ void func::SORTfindOnFaculty()
 		date::_date.push_back(date::_date_buff_sort[i]);
 
 	}
-	cout << endl << "successful sorting";
+	cout << endl << "успешная сортировка";
 }
 void func::SORTfindOnSpecialty()
 {
@@ -1044,9 +1046,11 @@ void func::SORTfindOnGroup()
 
 void func::SORTsubmenu()
 {
-	cout << endl;
 	SORTinfMenu();
-	switch (SORTchoice())
+	cout << "выберите вариант:";
+	int a = choice();
+	system("cls");
+	switch (a)
 	{
 	case 1:SORTfindOnNAME();
 
@@ -1087,7 +1091,7 @@ int func::SORTchoice()
 }
 void func::SORTinfMenu()
 {
-	cout << "0.Cортиврока по:" << endl;
+	cout << "Cортиврока по:" << endl;
 
 	cout << "1.имени" << endl;
 	cout << "2.фамилии" << endl;
@@ -1106,7 +1110,7 @@ void func::SORTinfMenu()
 
 
 
-	cout << "12.exit" << endl;
+	cout << "12.выход" << endl;
 }
 
 void func::kosl()
@@ -1242,7 +1246,7 @@ void func::changeinfMenu()
 
 
 
-	cout << "12.exit" << endl;
+	cout << "12.выход" << endl;
 }
 
 
