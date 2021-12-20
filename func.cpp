@@ -400,8 +400,8 @@ void func::findOnCourse()
 void func::findOnGroup()
 {
 	string group;
-	cout << " введите группу" << endl;
-	cout << "группу:";
+	cout << " введите имя" << endl;
+	cout << "имя:";
 	cin >> group;
 	cout << "список найденных студентов" << endl << endl;
 	for (int i = 0; i < date::_date.size(); i++)
