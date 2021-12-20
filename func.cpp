@@ -1,8 +1,10 @@
 #include "func.h"
 void func::creatNewPerson() {
+	system("cls");
 	cout << "введите количество студентов:";
 	int f;
 	cin >> f;
+	system("cls");
 	for (size_t i = 0; i < f; i++)
 	{
 		string name, firstname, secondname, country, city, street, faculty, specialty;
@@ -78,6 +80,8 @@ void func::creatNewPerson() {
 }// //
 void func::print()
 {
+	system("cls");
+
 	for (int i = 0; i < date::_date.size(); i++)
 	{
 		cout << "имя:" << date::_date[i]._name.nam << endl;
@@ -97,31 +101,34 @@ void func::print()
 		cout << "группа:" << date::_date[i]._adres.ad << endl;
 
 		cout << "=================================================" << endl;
-		cout << "нажмите люб. клавишу для просмотра следущего студента";
+		cout << "---->:";
 		system("pause");
 		system("cls");
 
 
 
 	}
-}//  //
+}
 void func::del()
 {
-	cout << "write the deleting item" << endl;
+	
+	print();
+	cout << "введите номер студента:";
 	int idx;
 	cin >> idx;
 	date::_date.erase(date::_date.begin() + idx - 1);
 	cout << endl << "new" << endl;
 	system("cls");
 	date::count--;
-}//  //
+}
 void func::addTofile()
 {
-	cout << "1.overwrite data" << endl << "2.save all data";
+	cout << "1.перезаписать данные в файл" << endl << "2.добавить данные к существ" << endl;
+	cout << "выбирите вариант:";
 	int l;
 	cin >> l;
 
-
+	system("cls");
 
 	if (l == 1)
 	{
@@ -143,7 +150,7 @@ void func::addTofile()
 	}
 
 
-
+	system("cls");
 }  //
 int func::file()
 {
@@ -164,8 +171,10 @@ int func::file()
 	}
 
 
-	cout << "write nubers of data from 1 to " << k << endl;
+	cout << "в файле находить " << k << " студентво"<<endl;
+	cout << "введите кол-во студентво для вывода из файла:";
 	kosl();
+
 	date::_date.clear();
 	for (int i = 0; i < date::_date_buff.size(); i++)
 	{
@@ -178,12 +187,13 @@ int func::file()
 
 	date::r = false;
 
-
+	system("cls");
 }
 void func::findthedate()
 {
 
 	submenu();
+	system("cls");
 }
 void  func::changTheData()
 {
@@ -206,7 +216,7 @@ void func::sortDATE() {
 void func::findOnNAME()
 {
 	string name;
-	cout << " введите имя" << endl;
+	cout << "введите имя" << endl;
 	cout << "имя:";
 	cin >> name;
 	cout << "список найденных студентов" << endl << endl;
@@ -222,9 +232,10 @@ void func::findOnNAME()
 void func::findOnFirstName()
 {
 	string firstname;
-	cout << " введите имя" << endl;
-	cout << "имя:";
+	cout << " введите фамилию" << endl;
+	cout << "фамилия:";
 	cin >> firstname;
+	cout << endl;
 	cout << "список найденных студентов" << endl << endl;
 	for (int i = 0; i < date::_date.size(); i++)
 	{
@@ -238,9 +249,10 @@ void func::findOnFirstName()
 void func::findOnsecName()
 {
 	string  secname;
-	cout << " введите имя" << endl;
-	cout << "имя:";
+	cout << " введите отчество" << endl;
+	cout << "отчество:";
 	cin >> secname;
+	cout << endl;
 	cout << "список найденных студентов" << endl << endl;
 	for (int i = 0; i < date::_date.size(); i++)
 	{
@@ -254,8 +266,8 @@ void func::findOnsecName()
 void func::findOnCountry()
 {
 	string country;
-	cout << " введите имя" << endl;
-	cout << "имя:";
+	cout << " введите страну" << endl;
+	cout << "страна:";
 	cin >> country;
 	cout << "список найденных студентов" << endl << endl;
 	for (int i = 0; i < date::_date.size(); i++)
@@ -270,8 +282,8 @@ void func::findOnCountry()
 void func::findOnCity()
 {
 	string city;
-	cout << " введите имя" << endl;
-	cout << "имя:";
+	cout << " введите город" << endl;
+	cout << "город:";
 	cin >> city;
 	cout << "список найденных студентов" << endl << endl;
 	for (int i = 0; i < date::_date.size(); i++)
@@ -286,8 +298,8 @@ void func::findOnCity()
 void func::findOnStreet()
 {
 	string street;
-	cout << " введите имя" << endl;
-	cout << "имя:";
+	cout << " введите улицу" << endl;
+	cout << "улица:";
 	cin >> street;
 	cout << "список найденных студентов" << endl << endl;
 	for (int i = 0; i < date::_date.size(); i++)
@@ -302,8 +314,8 @@ void func::findOnStreet()
 void func::findOnNumberOFhouse()
 {
 	string num;
-	cout << " введите имя" << endl;
-	cout << "имя:";
+	cout << " введите номер дома" << endl;
+	cout << "номер дома:";
 	cin >> num;
 	cout << "список найденных студентов" << endl << endl;
 	for (int i = 0; i < date::_date.size(); i++)
@@ -340,8 +352,8 @@ void func::findOnBirthday()
 void func::findOnFaculty()
 {
 	string faculty;
-	cout << " введите имя" << endl;
-	cout << "имя:";
+	cout << " введите факультет" << endl;
+	cout << "факультет:";
 	cin >> faculty;
 	cout << "список найденных студентов" << endl << endl;
 	for (int i = 0; i < date::_date.size(); i++)
@@ -356,8 +368,8 @@ void func::findOnFaculty()
 void func::findOnSpecialty()
 {
 	string specialty;
-	cout << " введите имя" << endl;
-	cout << "имя:";
+	cout << " введите спецуху" << endl;
+	cout << "спецуха:";
 	cin >> specialty;
 	cout << "список найденных студентов" << endl << endl;
 	for (int i = 0; i < date::_date.size(); i++)
@@ -372,8 +384,8 @@ void func::findOnSpecialty()
 void func::findOnCourse()
 {
 	string course;
-	cout << " введите имя" << endl;
-	cout << "имя:";
+	cout << " введите курс" << endl;
+	cout << "курс:";
 	cin >> course;
 	cout << "список найденных студентов" << endl << endl;
 	for (int i = 0; i < date::_date.size(); i++)
@@ -388,8 +400,8 @@ void func::findOnCourse()
 void func::findOnGroup()
 {
 	string group;
-	cout << " введите имя" << endl;
-	cout << "имя:";
+	cout << " введите группу" << endl;
+	cout << "группу:";
 	cin >> group;
 	cout << "список найденных студентов" << endl << endl;
 	for (int i = 0; i < date::_date.size(); i++)
@@ -478,11 +490,14 @@ void func::findOnAllParm()
 }
 void  func::submenu()
 {
-	cout << endl;
 	infMenu();
-	switch (choice())
+	cout << "выбирите вариант:";
+	int a=choice();
+	system("cls");
+	switch (a)
 	{
-	case 1:findOnNAME();
+	case 1:
+		findOnNAME();
 		break;
 	case 2:findOnFirstName();
 		break;
