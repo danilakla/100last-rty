@@ -1,9 +1,13 @@
 #include "func.h"
+#include "menu.h"
 void func::creatNewPerson() {
 	system("cls");
 	cout << "введите количество студентов:";
 	int f;
 	cin >> f;
+	if (f)
+	{
+	}
 	system("cls");
 	for (size_t i = 0; i < f; i++)
 	{

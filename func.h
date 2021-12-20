@@ -55,6 +55,7 @@ private:
 
 	//kost;
 	void kosl();
+	int exit();
 
 	//change the field of value
 	
