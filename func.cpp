@@ -5,8 +5,9 @@ void func::creatNewPerson() {
 	cout << "введите количество студентов:";
 	int f;
 	cin >> f;
-	if (f)
+	if (!f)
 	{
+		exit();
 	}
 	system("cls");
 	for (size_t i = 0; i < f; i++)
@@ -1136,6 +1137,11 @@ void func::kosl()
 			break;
 		}
 	}
+}
+
+int func::exit()
+{
+	return 0;
 }
 
 void func::changesubmenu(int choice)
