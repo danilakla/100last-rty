@@ -97,6 +97,9 @@ void func::print()
 		cout << "группа:" << date::_date[i]._adres.ad << endl;
 
 		cout << "=================================================" << endl;
+		cout << "нажмите люб. клавишу дл€ просмотра следущего студента";
+		system("pause");
+		system("cls");
 
 
 
@@ -185,15 +188,17 @@ void func::findthedate()
 void  func::changTheData()
 {
 	int choice;
+	print();
+	cout << "номер студента:";
 	cin >> choice;
-	cout << "what do you want to change:name";
-	string name;
-	cin >> name;
-	date::_date[choice]._name.nam = name;
-
+	cout << endl;
+	changesubmenu(choice);
+	cout << endl;
+	cout << "вы успешно обновили поле студента";
+	system("cls");
 }
 void func::sortDATE() {
-	//SORTsubmenu();
+	SORTsubmenu();
 }
 
 
@@ -1108,6 +1113,121 @@ void func::kosl()
 			break;
 		}
 	}
+}
+
+void func::changesubmenu(int choice)
+{
+	string name, firstname, secondname, country, city, street, faculty, specialty;
+
+	string numOfHouse, day, mounth, year, course, group;
+	cout << endl;
+	changeinfMenu();
+	switch (changechoice())
+	{
+	case 1:
+		cout<<endl<< "вводите новые данные:";
+		cin>> name;
+		date::_date[choice]._name.nam = name;
+
+		break;
+	case 2:
+		cout << endl << "вводите новые данные:";
+		cin >> firstname;
+		date::_date[choice]._name.first = firstname;
+
+		break;
+	case 3: 
+		cout << endl << "вводите новые данные:";
+		cin >> secondname;
+		date::_date[choice]._name.secname = secondname;
+
+		break;
+	case 4:
+		cout << endl << "вводите новые данные:";
+		cin >> country;
+		date::_date[choice]._adres.country = country;
+
+		break;
+	case 5: 
+		cout << endl << "вводите новые данные:";
+		cin >> city;
+		date::_date[choice]._adres.city = city;
+
+		break;
+	case 6: 
+		cout << endl << "вводите новые данные:";
+		cin >> street;
+		date::_date[choice]._adres.street = street;
+
+		break;
+	case 7: 
+		cout << endl << "вводите новые данные:";
+		cin >> numOfHouse;
+		date::_date[choice]._adres.ad = numOfHouse;
+
+		break;
+	case 8:
+		cout << endl << "вводите новые данные:";
+		cin >> faculty;
+		date::_date[choice]._University.faculty = faculty;
+
+		break;
+	case 9: 
+		cout << endl << "вводите новые данные:";
+		cin >> specialty;
+		date::_date[choice]._University.specialty = specialty;
+
+		break;
+	case 10:
+		cout << endl << "вводите новые данные:";
+		cin >> course;
+		date::_date[choice]._University.course = course;
+
+		break;
+	case 11:
+		cout << endl << "вводите новые данные:";
+		cin >> group;
+		date::_date[choice]._University.group= group;
+
+		break;
+	case 12:
+		break;
+	default:
+		break;
+	}
+}
+
+int func::changechoice()
+{
+	int a;
+	cin >> a;
+	cout << endl << endl;
+	return a;
+	return 0;
+}
+
+void func::changeinfMenu()
+{
+	cout << "выбирите измен€ймое поле" << endl;
+
+	cout << "1.им€" << endl;
+	cout << "2.фамили€" << endl;
+	cout << "3.отчество" << endl;
+
+	cout << "4.страна" << endl;
+	cout << "5.город" << endl;
+	cout << "6.улица" << endl;
+	cout << "7.дом" << endl;
+
+
+	cout << "8.факультет" << endl;
+	cout << "9.спецуха" << endl;
+	cout << "10.курс" << endl;
+	cout << "11.группа" << endl;
+
+
+
+	cout << "12.exit" << endl;
 }
 
 

@@ -56,5 +56,11 @@ private:
 	//kost;
 	void kosl();
 
+	//change the field of value
+	
+	void changesubmenu(int choice);
+	int changechoice();
+	void changeinfMenu();
+
 
 };
