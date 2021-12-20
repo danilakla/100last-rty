@@ -6,7 +6,7 @@ int menu::Menu() {
 	{
 	case 1:
 
-		//func::creatNewPerson();
+		func::creatNewPerson();
 		system("cls");
 
 		cout << endl << endl << "===================" << endl;
@@ -16,7 +16,7 @@ int menu::Menu() {
 	case 2:
 		system("cls");
 
-		//func::print();
+		func::print();
 		cout << endl << endl << "===================" << endl;
 
 
@@ -25,7 +25,7 @@ int menu::Menu() {
 	case 3:
 		system("cls");
 
-		//func::del();
+		func::del();
 
 		cout << endl << endl << "===================" << endl;
 
@@ -36,7 +36,7 @@ int menu::Menu() {
 	case 4:
 		system("cls");
 
-		//func::addTofile();
+		func::addTofile();
 
 		cout << endl << endl << "===================" << endl;
 
@@ -48,7 +48,7 @@ int menu::Menu() {
 	case 5:
 		system("cls");
 
-		///func::file();
+		func::file();
 
 		cout << endl << endl << "===================" << endl;
 
@@ -59,7 +59,7 @@ int menu::Menu() {
 	case 6:
 		system("cls");
 
-		//func::findthedate();
+		func::findthedate();
 
 		cout << endl << endl << "===================" << endl;
 
@@ -70,14 +70,14 @@ int menu::Menu() {
 	case 7:
 		system("cls");
 
-		//func::sortDATE();
+		func::sortDATE();
 
 		cout << endl << endl << "===================" << endl;
 		return Menu();
 	case 8:
 		system("cls");
 
-		//func::changTheData();
+		func::changTheData();
 
 		cout << endl << endl << "===================" << endl;
 		return Menu();

@@ -141,7 +141,6 @@
   <ItemGroup>
     <ClCompile Include="date.cpp" />
     <ClCompile Include="func.cpp" />
-    <ClCompile Include="headofdata.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
