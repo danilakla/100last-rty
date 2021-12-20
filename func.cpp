@@ -627,11 +627,11 @@ void func::SORTfindOnFirstName()
 	{
 		for (size_t i = 0; i < date::_date.size(); i++)
 		{
-			if ((int)date::_date[i]._name.nam[0] == (int)ENstartValue || (int)date::_date[i]._name.nam[0] == (int)ENstartValue2)
+			if ((int)date::_date[i]._name.first[0] == (int)ENstartValue || (int)date::_date[i]._name.first[0] == (int)ENstartValue2)
 			{
 				date::_date_buff_sort.push_back(date::_date[i]);
 			}
-			if ((int)date::_date[i]._name.nam[0] == (int)RUSstartValue || (int)date::_date[i]._name.nam[0] == (int)RUSstartValue2)
+			if ((int)date::_date[i]._name.first[0] == (int)RUSstartValue || (int)date::_date[i]._name.first[0] == (int)RUSstartValue2)
 			{
 				date::_date_buff_sort.push_back(date::_date[i]);
 			}
@@ -670,11 +670,11 @@ void func::SORTfindOnsecName()
 	{
 		for (size_t i = 0; i < date::_date.size(); i++)
 		{
-			if ((int)date::_date[i]._name.nam[0] == (int)ENstartValue || (int)date::_date[i]._name.nam[0] == (int)ENstartValue2)
+			if ((int)date::_date[i]._name.secname[0] == (int)ENstartValue || (int)date::_date[i]._name.secname[0] == (int)ENstartValue2)
 			{
 				date::_date_buff_sort.push_back(date::_date[i]);
 			}
-			if ((int)date::_date[i]._name.nam[0] == (int)RUSstartValue || (int)date::_date[i]._name.nam[0] == (int)RUSstartValue2)
+			if ((int)date::_date[i]._name.secname[0] == (int)RUSstartValue || (int)date::_date[i]._name.secname[0] == (int)RUSstartValue2)
 			{
 				date::_date_buff_sort.push_back(date::_date[i]);
 			}
@@ -713,11 +713,11 @@ void func::SORTfindOnCountry()
 	{
 		for (size_t i = 0; i < date::_date.size(); i++)
 		{
-			if ((int)date::_date[i]._name.nam[0] == (int)ENstartValue || (int)date::_date[i]._name.nam[0] == (int)ENstartValue2)
+			if ((int)date::_date[i]._adres.country[0] == (int)ENstartValue || (int)date::_date[i]._adres.country[0] == (int)ENstartValue2)
 			{
 				date::_date_buff_sort.push_back(date::_date[i]);
 			}
-			if ((int)date::_date[i]._name.nam[0] == (int)RUSstartValue || (int)date::_date[i]._name.nam[0] == (int)RUSstartValue2)
+			if ((int)date::_date[i]._adres.country[0] == (int)RUSstartValue || (int)date::_date[i]._adres.country[0] == (int)RUSstartValue2)
 			{
 				date::_date_buff_sort.push_back(date::_date[i]);
 			}
@@ -756,11 +756,11 @@ void func::SORTfindOnCity()
 	{
 		for (size_t i = 0; i < date::_date.size(); i++)
 		{
-			if ((int)date::_date[i]._name.nam[0] == (int)ENstartValue || (int)date::_date[i]._name.nam[0] == (int)ENstartValue2)
+			if ((int)date::_date[i]._adres.city[0] == (int)ENstartValue || (int)date::_date[i]._adres.city[0] == (int)ENstartValue2)
 			{
 				date::_date_buff_sort.push_back(date::_date[i]);
 			}
-			if ((int)date::_date[i]._name.nam[0] == (int)RUSstartValue || (int)date::_date[i]._name.nam[0] == (int)RUSstartValue2)
+			if ((int)date::_date[i]._adres.city[0] == (int)RUSstartValue || (int)date::_date[i]._adres.city[0] == (int)RUSstartValue2)
 			{
 				date::_date_buff_sort.push_back(date::_date[i]);
 			}
@@ -799,11 +799,11 @@ void func::SORTfindOnStreet()
 	{
 		for (size_t i = 0; i < date::_date.size(); i++)
 		{
-			if ((int)date::_date[i]._name.nam[0] == (int)ENstartValue || (int)date::_date[i]._name.nam[0] == (int)ENstartValue2)
+			if ((int)date::_date[i]._adres.street[0] == (int)ENstartValue || (int)date::_date[i]._adres.street[0] == (int)ENstartValue2)
 			{
 				date::_date_buff_sort.push_back(date::_date[i]);
 			}
-			if ((int)date::_date[i]._name.nam[0] == (int)RUSstartValue || (int)date::_date[i]._name.nam[0] == (int)RUSstartValue2)
+			if ((int)date::_date[i]._adres.street[0] == (int)RUSstartValue || (int)date::_date[i]._adres.street[0] == (int)RUSstartValue2)
 			{
 				date::_date_buff_sort.push_back(date::_date[i]);
 			}
@@ -830,10 +830,8 @@ void func::SORTfindOnStreet()
 void func::SORTfindOnNumberOFhouse()
 {
 	cout << "sort date on name" << endl;
-	char ENstartValue = 'A';
-	char ENstartValue2 = 'a';
-	char RUSstartValue = 'А';
-	char RUSstartValue2 = 'а';
+	char startValue = '1';
+
 
 
 
@@ -842,63 +840,15 @@ void func::SORTfindOnNumberOFhouse()
 	{
 		for (size_t i = 0; i < date::_date.size(); i++)
 		{
-			if ((int)date::_date[i]._name.nam[0] == (int)ENstartValue || (int)date::_date[i]._name.nam[0] == (int)ENstartValue2)
+			if ((int)date::_date[i]._adres.ad[0] == (int)startValue)
 			{
 				date::_date_buff_sort.push_back(date::_date[i]);
 			}
-			if ((int)date::_date[i]._name.nam[0] == (int)RUSstartValue || (int)date::_date[i]._name.nam[0] == (int)RUSstartValue2)
-			{
-				date::_date_buff_sort.push_back(date::_date[i]);
-			}
+
 
 		}
-		ENstartValue++;
-		ENstartValue2++;
-		RUSstartValue++;
-		RUSstartValue2++;
-		if (date::_date_buff_sort.size() == date::_date.size())
-		{
-			break;
-		}
+		startValue++;
 
-	}
-	date::_date.clear();
-	for (int i = 0; i < date::_date_buff_sort.size(); i++)
-	{
-		date::_date.push_back(date::_date_buff_sort[i]);
-
-	}
-	cout << endl << "successful sorting";
-}
-void func::SORTfindOnBirthday()
-{
-	cout << "sort date on name" << endl;
-	char ENstartValue = 'A';
-	char ENstartValue2 = 'a';
-	char RUSstartValue = 'А';
-	char RUSstartValue2 = 'а';
-
-
-
-
-	for (size_t k = 0; ; k++)
-	{
-		for (size_t i = 0; i < date::_date.size(); i++)
-		{
-			if ((int)date::_date[i]._name.nam[0] == (int)ENstartValue || (int)date::_date[i]._name.nam[0] == (int)ENstartValue2)
-			{
-				date::_date_buff_sort.push_back(date::_date[i]);
-			}
-			if ((int)date::_date[i]._name.nam[0] == (int)RUSstartValue || (int)date::_date[i]._name.nam[0] == (int)RUSstartValue2)
-			{
-				date::_date_buff_sort.push_back(date::_date[i]);
-			}
-
-		}
-		ENstartValue++;
-		ENstartValue2++;
-		RUSstartValue++;
-		RUSstartValue2++;
 		if (date::_date_buff_sort.size() == date::_date.size())
 		{
 			break;
@@ -928,11 +878,11 @@ void func::SORTfindOnFaculty()
 	{
 		for (size_t i = 0; i < date::_date.size(); i++)
 		{
-			if ((int)date::_date[i]._name.nam[0] == (int)ENstartValue || (int)date::_date[i]._name.nam[0] == (int)ENstartValue2)
+			if ((int)date::_date[i]._University.faculty[0] == (int)ENstartValue || (int)date::_date[i]._University.faculty[0] == (int)ENstartValue2)
 			{
 				date::_date_buff_sort.push_back(date::_date[i]);
 			}
-			if ((int)date::_date[i]._name.nam[0] == (int)RUSstartValue || (int)date::_date[i]._name.nam[0] == (int)RUSstartValue2)
+			if ((int)date::_date[i]._University.faculty[0] == (int)RUSstartValue || (int)date::_date[i]._University.faculty[0] == (int)RUSstartValue2)
 			{
 				date::_date_buff_sort.push_back(date::_date[i]);
 			}
@@ -971,11 +921,11 @@ void func::SORTfindOnSpecialty()
 	{
 		for (size_t i = 0; i < date::_date.size(); i++)
 		{
-			if ((int)date::_date[i]._name.nam[0] == (int)ENstartValue || (int)date::_date[i]._name.nam[0] == (int)ENstartValue2)
+			if ((int)date::_date[i]._University.specialty[0] == (int)ENstartValue || (int)date::_date[i]._University.specialty[0] == (int)ENstartValue2)
 			{
 				date::_date_buff_sort.push_back(date::_date[i]);
 			}
-			if ((int)date::_date[i]._name.nam[0] == (int)RUSstartValue || (int)date::_date[i]._name.nam[0] == (int)RUSstartValue2)
+			if ((int)date::_date[i]._University.specialty[0] == (int)RUSstartValue || (int)date::_date[i]._University.specialty[0] == (int)RUSstartValue2)
 			{
 				date::_date_buff_sort.push_back(date::_date[i]);
 			}
@@ -1002,10 +952,8 @@ void func::SORTfindOnSpecialty()
 void func::SORTfindOnCourse()
 {
 	cout << "sort date on name" << endl;
-	char ENstartValue = 'A';
-	char ENstartValue2 = 'a';
-	char RUSstartValue = 'А';
-	char RUSstartValue2 = 'а';
+	char startValue = '1';
+
 
 
 
@@ -1014,20 +962,15 @@ void func::SORTfindOnCourse()
 	{
 		for (size_t i = 0; i < date::_date.size(); i++)
 		{
-			if ((int)date::_date[i]._name.nam[0] == (int)ENstartValue || (int)date::_date[i]._name.nam[0] == (int)ENstartValue2)
-			{
-				date::_date_buff_sort.push_back(date::_date[i]);
-			}
-			if ((int)date::_date[i]._name.nam[0] == (int)RUSstartValue || (int)date::_date[i]._name.nam[0] == (int)RUSstartValue2)
+			if ((int)date::_date[i]._University.course[0] == (int)startValue)
 			{
 				date::_date_buff_sort.push_back(date::_date[i]);
 			}
 
+
 		}
-		ENstartValue++;
-		ENstartValue2++;
-		RUSstartValue++;
-		RUSstartValue2++;
+		startValue++;
+
 		if (date::_date_buff_sort.size() == date::_date.size())
 		{
 			break;
@@ -1045,10 +988,8 @@ void func::SORTfindOnCourse()
 void func::SORTfindOnGroup()
 {
 	cout << "sort date on name" << endl;
-	char ENstartValue = 'A';
-	char ENstartValue2 = 'a';
-	char RUSstartValue = 'А';
-	char RUSstartValue2 = 'а';
+	char startValue = '1';
+
 
 
 
@@ -1057,20 +998,14 @@ void func::SORTfindOnGroup()
 	{
 		for (size_t i = 0; i < date::_date.size(); i++)
 		{
-			if ((int)date::_date[i]._name.nam[0] == (int)ENstartValue || (int)date::_date[i]._name.nam[0] == (int)ENstartValue2)
-			{
-				date::_date_buff_sort.push_back(date::_date[i]);
-			}
-			if ((int)date::_date[i]._name.nam[0] == (int)RUSstartValue || (int)date::_date[i]._name.nam[0] == (int)RUSstartValue2)
+			if ((int)date::_date[i]._University.group[0] == (int)startValue)
 			{
 				date::_date_buff_sort.push_back(date::_date[i]);
 			}
 
+
 		}
-		ENstartValue++;
-		ENstartValue2++;
-		RUSstartValue++;
-		RUSstartValue2++;
+		startValue++;
 		if (date::_date_buff_sort.size() == date::_date.size())
 		{
 			break;
@@ -1108,17 +1043,16 @@ void func::SORTsubmenu()
 		break;
 	case 7:SORTfindOnNumberOFhouse();
 		break;
-	case 8:SORTfindOnBirthday();
+
+	case 8:SORTfindOnFaculty();
 		break;
-	case 9:SORTfindOnFaculty();
+	case 9:SORTfindOnSpecialty();
 		break;
-	case 10:SORTfindOnSpecialty();
+	case 10:SORTfindOnCourse();
 		break;
-	case 11:SORTfindOnCourse();
+	case 11:SORTfindOnGroup();
 		break;
-	case 12:SORTfindOnGroup();
-		break;
-	case 13:
+	case 12:
 		break;
 	default:
 		break;
@@ -1144,16 +1078,15 @@ void func::SORTinfMenu()
 	cout << "6.улице" << endl;
 	cout << "7.дома" << endl;
 
-	cout << "8.рождения" << endl;
 
-	cout << "9.факультету" << endl;
-	cout << "10.спецухе" << endl;
-	cout << "11.курсу" << endl;
-	cout << "12.группе" << endl;
-
+	cout << "8.факультету" << endl;
+	cout << "9.спецухе" << endl;
+	cout << "10.курсу" << endl;
+	cout << "11.группе" << endl;
 
 
-	cout << "13.exit" << endl;
+
+	cout << "12.exit" << endl;
 }
 
 void func::kosl()

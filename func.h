@@ -44,7 +44,6 @@ private:
 	void SORTfindOnCity();
 	void SORTfindOnStreet();
 	void SORTfindOnNumberOFhouse();
-	void SORTfindOnBirthday();
 	void SORTfindOnFaculty();
 	void SORTfindOnSpecialty();
 	void SORTfindOnCourse();
