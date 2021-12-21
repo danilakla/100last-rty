@@ -136,6 +136,7 @@ void func::del()
 	{
 		cout << "данные не созданы либо не найдены"<<endl;
 		system("pause");
+		system("cls");
 	}
 
 }
