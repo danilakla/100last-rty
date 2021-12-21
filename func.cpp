@@ -224,14 +224,32 @@ void  func::changTheData()
 {
 	int choice;
 	print();
-	
-	cout << "номер студента:";
-	cin >> choice;
-	cout << endl;
-	changesubmenu(choice);
-	cout << endl;
-	cout << "вы успешно обновили поле студента";
-	system("cls");
+	if (date::_date.size()==0)
+	{
+		cout << "отсутствуют данные для изменения"<<endl;
+		system("pause");
+	}
+	else
+	{
+		cout << "номер студента:";
+		cin >> choice;
+		system("cls");
+		if (choice<1||choice>date::_date.size())
+		{
+
+		}
+		else
+		{
+			cout << endl;
+			changesubmenu(choice - 1);
+			cout << endl;
+			cout << "вы успешно обновили поле студента";
+			system("cls");
+		}
+
+
+	}
+
 }
 void func::sortDATE() {
 	SORTsubmenu();
@@ -520,6 +538,10 @@ void  func::submenu()
 	infMenu();
 	cout << "выберите вариант:";
 	int a=choice();
+	if (!a)
+	{
+		exit();
+	}
 	system("cls");
 	switch (a)
 	{
@@ -1074,6 +1096,7 @@ void func::SORTsubmenu()
 	SORTinfMenu();
 	cout << "выберите вариант:";
 	int a = choice();
+	
 	system("cls");
 	switch (a)
 	{
@@ -1183,7 +1206,11 @@ void func::changesubmenu(int choice)
 	string numOfHouse, day, mounth, year, course, group;
 	cout << endl;
 	changeinfMenu();
-	switch (changechoice())
+	cout << endl;
+	cout << "выберете вариант:";
+	int a = changechoice();
+	system("cls");
+	switch (a)
 	{
 	case 1:
 		cout<<endl<< "вводите новые данные:";
