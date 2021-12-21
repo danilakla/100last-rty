@@ -48,7 +48,7 @@ int menu::Menu() {
 	case 5:
 		system("cls");
 
-		func::file();
+		func::File();
 
 		cout << endl << endl << "===================" << endl;
 

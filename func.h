@@ -9,7 +9,7 @@ public:
 	void print();
 	void del();
 	void addTofile();
-	int file();
+	int File();
 	void findthedate();
 	void  changTheData();
 	void sortDATE();
@@ -54,7 +54,7 @@ private:
 	void SORTinfMenu();
 
 	//kost;
-	void kosl();
+	void kosl(int k);
 	int exit();
 
 	//change the field of value

@@ -121,10 +121,23 @@ void func::del()
 	cout << "введите номер студента:";
 	int idx;
 	cin >> idx;
-	date::_date.erase(date::_date.begin() + idx - 1);
-	cout << endl << "new" << endl;
-	system("cls");
-	date::count--;
+	if (!idx)
+	{
+		exit();
+	}
+	if (date::_date.size()!=0)
+	{
+		date::_date.erase(date::_date.begin() + idx - 1);
+		cout << endl << "new" << endl;
+		system("cls");
+		date::count--;
+	}
+	else
+	{
+		cout << "данные не созданы либо не найдены"<<endl;
+		system("pause");
+	}
+
 }
 void func::addTofile()
 {
@@ -132,7 +145,10 @@ void func::addTofile()
 	cout << "выбирите вариант:";
 	int l;
 	cin >> l;
-
+	if (!l)
+	{
+		exit();
+	}
 	system("cls");
 
 	if (l == 1)
@@ -145,7 +161,7 @@ void func::addTofile()
 		}
 
 	}
-	else
+	else if(l==2)
 	{
 		fstream file("class.txt", ios::in | ios::out | ios::app);
 		for (size_t i = 0; i < date::_date.size(); i++)
@@ -153,11 +169,15 @@ void func::addTofile()
 			file.write((char*)&date::_date[i], sizeof(date));
 		}
 	}
+	else
+	{
+		exit();
+	}
 
 
 	system("cls");
 }  //
-int func::file()
+int func::File()
 {
 	if (date::r == false)
 	{
@@ -178,7 +198,7 @@ int func::file()
 
 	cout << "в файле находить " << k << " студентво"<<endl;
 	cout << "введите кол-во студентво для вывода из файла:";
-	kosl();
+	kosl(k);
 
 	date::_date.clear();
 	for (int i = 0; i < date::_date_buff.size(); i++)
@@ -1118,25 +1138,37 @@ void func::SORTinfMenu()
 	cout << "12.выход" << endl;
 }
 
-void func::kosl()
+void func::kosl(int k)
 {
 	fstream file("class.txt", ios::in);
 	int f;
 	cin >> f;
-	for (size_t i = 0; i < f; i++)
+	if (!f ||f<0 ||f>k)
 	{
-		date h(f);
+		system("cls");
+		cout << "может получеться в след. раз"<<endl;
+		cout << "restart the program that get the data fome the file(good luck)"<<endl;
+		system("pause");
+		
 	}
-
-	int pl = 0;
-	while (file.read((char*)&date::_date_buff[pl], sizeof(date)))
+	else
 	{
-		pl++;
-		if (pl == f)
+		for (size_t i = 0; i < f; i++)
 		{
-			break;
+			date h(f);
+		}
+
+		int pl = 0;
+		while (file.read((char*)&date::_date_buff[pl], sizeof(date)))
+		{
+			pl++;
+			if (pl == f)
+			{
+				break;
+			}
 		}
 	}
+
 }
 
 int func::exit()
