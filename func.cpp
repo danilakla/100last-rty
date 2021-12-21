@@ -89,6 +89,7 @@ void func::print()
 
 	for (int i = 0; i < date::_date.size(); i++)
 	{
+		cout << "id студента:"<<i<<endl;
 		cout << "имя:" << date::_date[i]._name.nam << endl;
 		cout << "фамилия:" << date::_date[i]._name.first << endl;
 		cout << "очество:" << date::_date[i]._name.secname << endl;
@@ -121,23 +122,22 @@ void func::del()
 	cout << "введите номер студента:";
 	int idx;
 	cin >> idx;
-	if (!idx)
+	if (!idx|| idx<0 || idx>date::_date.size())
 	{
+		cout << "данные не созданы либо не найдены" << endl;
+		system("pause");
+		system("cls");
 		exit();
 	}
-	if (date::_date.size()!=0)
+
+	else
 	{
 		date::_date.erase(date::_date.begin() + idx - 1);
 		cout << endl << "new" << endl;
 		system("cls");
 		date::count--;
 	}
-	else
-	{
-		cout << "данные не созданы либо не найдены"<<endl;
-		system("pause");
-		system("cls");
-	}
+
 
 }
 void func::addTofile()
