@@ -15,7 +15,6 @@ void func::creatNewPerson() {
 		string name, firstname, secondname, country, city, street, faculty, specialty;
 
 		string numOfHouse, day, mounth, year, course, group;
-
 		cout << "имя:";
 		cin >> name;
 		if ((int)name[0] <48 || (int)name[0] > 57)
@@ -229,6 +228,8 @@ void func::print()
 
 	for (int i = 0; i < date::_date.size(); i++)
 	{
+		cout << "номер студента:" << i+1 << endl;
+
 		cout << "id студента:"<<i<<endl;
 		cout << "имя:" << date::_date[i]._name.nam << endl;
 		cout << "фамилия:" << date::_date[i]._name.first << endl;	
