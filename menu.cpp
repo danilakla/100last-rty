@@ -9,7 +9,6 @@ int menu::Menu() {
 		func::creatNewPerson();
 		system("cls");
 
-		cout << endl << endl << "===================" << endl;
 
 
 		return Menu();
@@ -17,7 +16,6 @@ int menu::Menu() {
 		system("cls");
 
 		func::print();
-		cout << endl << endl << "===================" << endl;
 
 
 		return Menu();
@@ -27,7 +25,6 @@ int menu::Menu() {
 
 		func::del();
 
-		cout << endl << endl << "===================" << endl;
 
 
 
@@ -38,7 +35,6 @@ int menu::Menu() {
 
 		func::addTofile();
 
-		cout << endl << endl << "===================" << endl;
 
 
 
@@ -50,7 +46,6 @@ int menu::Menu() {
 
 		func::File();
 
-		cout << endl << endl << "===================" << endl;
 
 
 
@@ -61,7 +56,6 @@ int menu::Menu() {
 
 		func::findthedate();
 
-		cout << endl << endl << "===================" << endl;
 
 
 
@@ -72,14 +66,12 @@ int menu::Menu() {
 
 		func::sortDATE();
 
-		cout << endl << endl << "===================" << endl;
 		return Menu();
 	case 8:
 		system("cls");
 
 		func::changTheData();
 
-		cout << endl << endl << "===================" << endl;
 		return Menu();
 	case 9:
 		return 0;

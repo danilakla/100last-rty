@@ -5,7 +5,7 @@ class func :protected date
 {
 public:
 	//main manipulate method 
-	void creatNewPerson();
+	func creatNewPerson();
 	void print();
 	void del();
 	void addTofile();

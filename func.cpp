@@ -1,6 +1,6 @@
 #include "func.h"
 #include "menu.h"
-void func::creatNewPerson() {
+func func::creatNewPerson() {
 	system("cls");
 	cout << "введите количество студентов:";
 	int f;
@@ -18,6 +18,15 @@ void func::creatNewPerson() {
 
 		cout << "им€:";
 		cin >> name;
+		if ((int)name[0]<48||(int)name[0]>57)
+		{
+
+		}
+		else {
+			cout << "данные введены некорректно, попробуйте еще раз"<<endl;
+			system("pause");
+			return creatNewPerson();
+		}
 		cout << endl;
 
 		cout << "фамили€:";
@@ -40,19 +49,19 @@ void func::creatNewPerson() {
 		cin >> street;
 		cout << endl;
 
-		cout << "номир дом:";
+		cout << "номер дома:";
 		cin >> numOfHouse;
 		cout << endl;
 		cout << "полную дату рождени€(пример 12 04 2001)" << endl;
 
-		cout << "день";
+		cout << "день:";
 		cin >> day;
 		cout << endl;
-		cout << "мес€ц";
+		cout << "мес€ц:";
 		cin >> mounth;
 		cout << endl;
 
-		cout << "год";
+		cout << "год:";
 		cin >> year;
 		cout << endl;
 
@@ -607,7 +616,7 @@ void func::infMenu()
 
 
 
-	cout << "13.exit" << endl;
+	cout << "13.выход" << endl;
 }
 void func::listForSort(int i) {
 
@@ -641,6 +650,7 @@ void func::listForSort(int i) {
 
 void func::SORTfindOnNAME()
 {
+
 	cout << "sort date on name" << endl;
 	char ENstartValue = 'A';
 	char ENstartValue2 = 'a';
@@ -654,6 +664,7 @@ void func::SORTfindOnNAME()
 	{
 		for (size_t i = 0; i < date::_date.size(); i++)
 		{
+			
 			if ((int)date::_date[i]._name.nam[0] == (int)ENstartValue || (int)date::_date[i]._name.nam[0] == (int)ENstartValue2)
 			{
 				date::_date_buff_sort.push_back(date::_date[i]);
@@ -821,6 +832,7 @@ void func::SORTfindOnCountry()
 }
 void func::SORTfindOnCity()
 {
+
 	cout << "sort date on name" << endl;
 	char ENstartValue = 'A';
 	char ENstartValue2 = 'a';
