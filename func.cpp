@@ -322,6 +322,10 @@ int func::File()
 {
 	if (date::r == false)
 	{
+		cout << "Вы уже получили данные из файла";
+		cout << endl;
+		system("pause");
+		system("cls");
 		return 0;
 	}
 	int k = 0;
