@@ -91,7 +91,7 @@ void func::print()
 	{
 		cout << "id студента:"<<i<<endl;
 		cout << "имя:" << date::_date[i]._name.nam << endl;
-		cout << "фамилия:" << date::_date[i]._name.first << endl;
+		cout << "фамилия:" << date::_date[i]._name.first << endl;	
 		cout << "очество:" << date::_date[i]._name.secname << endl;
 
 		cout << "страна:" << date::_date[i]._adres.country << endl;
@@ -101,10 +101,10 @@ void func::print()
 
 		cout << "дата рождения:" << date::_date[i]._da.day << "." << date::_date[i]._da.mounth << "." << date::_date[i]._da.years << endl;
 
-		cout << "факультет:" << date::_date[i]._adres.country << endl;
-		cout << "специальность:" << date::_date[i]._adres.city << endl;
-		cout << "курс:" << date::_date[i]._adres.street << endl;
-		cout << "группа:" << date::_date[i]._adres.ad << endl;
+		cout << "факультет:" << date::_date[i]._University.faculty << endl;
+		cout << "специальность:" << date::_date[i]._University.specialty << endl;
+		cout << "курс:" << date::_date[i]._University.course << endl;
+		cout << "группа:" << date::_date[i]._University.group << endl;
 
 		cout << "=================================================" << endl;
 		cout << "---->:";
@@ -680,6 +680,7 @@ void func::SORTfindOnNAME()
 		date::_date.push_back(date::_date_buff_sort[i]);
 
 	}
+	date::_date_buff_sort.clear();
 	cout << endl << "successful sorting";
 }
 void func::SORTfindOnFirstName()
@@ -723,6 +724,8 @@ void func::SORTfindOnFirstName()
 		date::_date.push_back(date::_date_buff_sort[i]);
 
 	}
+	date::_date_buff_sort.clear();
+
 	cout << endl << "successful sorting";
 }
 void func::SORTfindOnsecName()
@@ -759,6 +762,7 @@ void func::SORTfindOnsecName()
 			break;
 		}
 
+
 	}
 	date::_date.clear();
 	for (int i = 0; i < date::_date_buff_sort.size(); i++)
@@ -766,6 +770,8 @@ void func::SORTfindOnsecName()
 		date::_date.push_back(date::_date_buff_sort[i]);
 
 	}
+	date::_date_buff_sort.clear();
+
 	cout << endl << "successful sorting";
 }
 void func::SORTfindOnCountry()
@@ -809,6 +815,8 @@ void func::SORTfindOnCountry()
 		date::_date.push_back(date::_date_buff_sort[i]);
 
 	}
+	date::_date_buff_sort.clear();
+
 	cout << endl << "successful sorting";
 }
 void func::SORTfindOnCity()
@@ -852,6 +860,8 @@ void func::SORTfindOnCity()
 		date::_date.push_back(date::_date_buff_sort[i]);
 
 	}
+	date::_date_buff_sort.clear();
+
 	cout << endl << "successful sorting";
 }
 void func::SORTfindOnStreet()
@@ -895,6 +905,8 @@ void func::SORTfindOnStreet()
 		date::_date.push_back(date::_date_buff_sort[i]);
 
 	}
+	date::_date_buff_sort.clear();
+
 	cout << endl << "successful sorting";
 }
 void func::SORTfindOnNumberOFhouse()
@@ -931,6 +943,8 @@ void func::SORTfindOnNumberOFhouse()
 		date::_date.push_back(date::_date_buff_sort[i]);
 
 	}
+	date::_date_buff_sort.clear();
+
 	cout << endl << "successful sorting";
 }
 void func::SORTfindOnFaculty()
@@ -974,6 +988,8 @@ void func::SORTfindOnFaculty()
 		date::_date.push_back(date::_date_buff_sort[i]);
 
 	}
+	date::_date_buff_sort.clear();
+
 	cout << endl << "успешная сортировка";
 }
 void func::SORTfindOnSpecialty()
@@ -1017,6 +1033,8 @@ void func::SORTfindOnSpecialty()
 		date::_date.push_back(date::_date_buff_sort[i]);
 
 	}
+	date::_date_buff_sort.clear();
+
 	cout << endl << "successful sorting";
 }
 void func::SORTfindOnCourse()
@@ -1053,6 +1071,8 @@ void func::SORTfindOnCourse()
 		date::_date.push_back(date::_date_buff_sort[i]);
 
 	}
+	date::_date_buff_sort.clear();
+
 	cout << endl << "successful sorting";
 }
 void func::SORTfindOnGroup()
@@ -1088,6 +1108,8 @@ void func::SORTfindOnGroup()
 		date::_date.push_back(date::_date_buff_sort[i]);
 
 	}
+	date::_date_buff_sort.clear();
+
 	cout << endl << "successful sorting";
 }
 
