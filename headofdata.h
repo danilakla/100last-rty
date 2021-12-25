@@ -1,6 +1,4 @@
-#pragma once
 
-#pragma once
 #include"lib.h"
 class adres
 {

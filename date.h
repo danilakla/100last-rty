@@ -22,6 +22,8 @@ public:
 	da _da;
 	University _University;
 
+
+	static vector<date> _date_T;
 	static vector<date> _date;
 	static vector<date> _date_buff;
 	static vector<date>_date_buff_sort;

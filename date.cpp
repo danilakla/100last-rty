@@ -1,11 +1,15 @@
 #include "date.h"
 date::date()
 {
+	_date_T.push_back(*this);
+
 
 }///gblhc
 date::date(string name, string first, string secname, string country, string city, string  adres, string dom, string day, string mounth, string yers, string faculty, string specialty, string cours, string group) {
 
 	_date.push_back(*this);
+	_date_T.push_back(*this);
+
 	this->date::_date[count]._name.nam = name;
 	this->date::_date[count]._name.first = first;
 	this->date::_date[count]._name.secname = secname;
@@ -37,6 +41,7 @@ date::date(int choice) {
 vector<date>date::_date;
 vector<date>date::_date_buff;
 vector<date>date::_date_buff_sort;
+vector<date> date::_date_T;
 
 
 int date::sortcount = 0;
@@ -44,4 +49,5 @@ int date::count = 0;
 int date::count1 = 0;
 
 bool date::r = true;
+
 
