@@ -28,7 +28,7 @@ void func::creatNewPerson() {
 			{
 				cout << endl;
 
-				cout << "очество:";
+				cout << "отчество:";
 				cin >> secondname;
 				if ((int)secondname[0] < 48 || (int)secondname[0] > 57)
 				{
@@ -54,26 +54,26 @@ void func::creatNewPerson() {
 
 								cout << "номер дома:";
 								cin >> numOfHouse;
-								if ((int)numOfHouse[0] > 48 && (int)numOfHouse[0] < 57)
+								if ((int)numOfHouse[0]>= 48 && (int)numOfHouse[0] <= 57)
 								{
 									cout << endl;
 									cout << "полную дату рождени€(пример 12 04 2001)" << endl;
 
 									cout << "день:";
 									cin >> day;
-									if ((int)day[0] > 48 && (int)day[0] < 57)
+									if ((int)day[0] >= 48 && (int)day[0] <= 57)
 									{
 										cout << endl;
 										cout << "мес€ц:";
 										cin >> mounth;
-										if ((int)mounth[0] > 48 && (int)mounth[0] < 57)
+										if ((int)mounth[0] >= 48 && (int)mounth[0] <= 57)
 										{
 
 											cout << endl;
 
 											cout << "год:";
 											cin >> year;
-											if ((int)year[0] > 48 && (int)year[0] < 57)
+											if ((int)year[0] >= 48 && (int)year[0] <= 57)
 											{
 
 												cout << endl;
@@ -93,13 +93,13 @@ void func::creatNewPerson() {
 
 														cout << "курс:";
 														cin >> course;
-														if ((int)course[0] > 48 && (int)course[0] < 57)
+														if ((int)course[0] >= 48 && (int)course[0] <= 57)
 														{
 															cout << endl;
 
 															cout << "группа:";
 															cin >> group;
-															if ((int)group[0] > 48 && (int)group[0] < 57)
+															if ((int)group[0] >= 48 && (int)group[0] <= 57)
 															{
 																cout << endl;
 
@@ -232,7 +232,7 @@ void func::print()
 		cout << "id студента:"<<i<<endl;
 		cout << "им€:" << date::_date[i]._name.nam << endl;
 		cout << "фамили€:" << date::_date[i]._name.first << endl;	
-		cout << "очество:" << date::_date[i]._name.secname << endl;
+		cout << "отчество:" << date::_date[i]._name.secname << endl;
 
 		cout << "страна:" << date::_date[i]._adres.country << endl;
 		cout << "город:" << date::_date[i]._adres.city << endl;
@@ -758,7 +758,7 @@ void func::listForSort(int i) {
 	cout << "id" << i << endl;
 	cout << "им€:" << date::_date[i]._name.nam << endl;
 	cout << "фамили€:" << date::_date[i]._name.first << endl;
-	cout << "очество:" << date::_date[i]._name.secname << endl;
+	cout << "отчество:" << date::_date[i]._name.secname << endl;
 
 	cout << "страна:" << date::_date[i]._adres.country << endl;
 	cout << "город:" << date::_date[i]._adres.city << endl;
@@ -1385,66 +1385,187 @@ void func::changesubmenu(int choice)
 	case 1:
 		cout<<endl<< "вводите новые данные:";
 		cin>> name;
+		if ((int)name[0] < 48 || (int)name[0] > 57)
+		{
+
+		}
+		else
+		{
+
+			cout << "данные введены некорректно, попробуйте еще раз" << endl;
+			system("pause");
+			break;
+		}
 		date::_date[choice]._name.nam = name;
 
 		break;
 	case 2:
 		cout << endl << "вводите новые данные:";
 		cin >> firstname;
+		if ((int)firstname[0] < 48 || (int)firstname[0] > 57)
+		{
+
+		}
+		else
+		{
+
+			cout << "данные введены некорректно, попробуйте еще раз" << endl;
+			system("pause");
+			break;
+		}
 		date::_date[choice]._name.first = firstname;
 
 		break;
 	case 3: 
 		cout << endl << "вводите новые данные:";
 		cin >> secondname;
+		if ((int)secondname[0] < 48 || (int)secondname[0] > 57)
+		{
+
+		}
+		else
+		{
+
+			cout << "данные введены некорректно, попробуйте еще раз" << endl;
+			system("pause");
+			break;
+		}
 		date::_date[choice]._name.secname = secondname;
 
 		break;
 	case 4:
 		cout << endl << "вводите новые данные:";
 		cin >> country;
+		if ((int)country[0] < 48 || (int)country[0] > 57)
+		{
+
+		}
+		else
+		{
+
+			cout << "данные введены некорректно, попробуйте еще раз" << endl;
+			system("pause");
+			break;
+		}
 		date::_date[choice]._adres.country = country;
 
 		break;
 	case 5: 
 		cout << endl << "вводите новые данные:";
 		cin >> city;
+		if ((int)city[0] < 48 || (int)city[0] > 57)
+		{
+
+		}
+		else
+		{
+
+			cout << "данные введены некорректно, попробуйте еще раз" << endl;
+			system("pause");
+			break;
+		}
 		date::_date[choice]._adres.city = city;
 
 		break;
 	case 6: 
 		cout << endl << "вводите новые данные:";
 		cin >> street;
+		if ((int)street[0] < 48 || (int)street[0] > 57)
+		{
+
+		}
+		else
+		{
+
+			cout << "данные введены некорректно, попробуйте еще раз" << endl;
+			system("pause");
+			break;
+		}
 		date::_date[choice]._adres.street = street;
 
 		break;
 	case 7: 
 		cout << endl << "вводите новые данные:";
 		cin >> numOfHouse;
+		if ((int)numOfHouse[0] >= 48 && (int)numOfHouse[0] <= 57)
+		{
+
+		}
+		else
+		{
+
+			cout << "данные введены некорректно, попробуйте еще раз" << endl;
+			system("pause");
+			break;
+		}
 		date::_date[choice]._adres.ad = numOfHouse;
 
 		break;
 	case 8:
 		cout << endl << "вводите новые данные:";
 		cin >> faculty;
+		if ((int)faculty[0] < 48 || (int)faculty[0] > 57)
+		{
+
+		}
+		else
+		{
+
+			cout << "данные введены некорректно, попробуйте еще раз" << endl;
+			system("pause");
+			break;
+		}
 		date::_date[choice]._University.faculty = faculty;
 
 		break;
 	case 9: 
 		cout << endl << "вводите новые данные:";
 		cin >> specialty;
+		if ((int)specialty[0] < 48 || (int)specialty[0] > 57)
+		{
+
+		}
+		else
+		{
+
+			cout << "данные введены некорректно, попробуйте еще раз" << endl;
+			system("pause");
+			break;
+		}
 		date::_date[choice]._University.specialty = specialty;
 
 		break;
 	case 10:
 		cout << endl << "вводите новые данные:";
 		cin >> course;
+		if ((int)course[0] >= 48 && (int)course[0] <= 57)
+		{
+
+		}
+		else
+		{
+
+			cout << "данные введены некорректно, попробуйте еще раз" << endl;
+			system("pause");
+			break;
+		}
 		date::_date[choice]._University.course = course;
 
 		break;
 	case 11:
 		cout << endl << "вводите новые данные:";
 		cin >> group;
+		if ((int)group[0] >= 48 && (int)group[0] <= 57)
+		{
+
+		}
+		else
+		{
+
+			cout << "данные введены некорректно, попробуйте еще раз" << endl;
+			system("pause");
+			break;
+		}
 		date::_date[choice]._University.group= group;
 
 		break;
