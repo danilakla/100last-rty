@@ -1,6 +1,6 @@
 #include "func.h"
 #include "menu.h"
-func func::creatNewPerson() {
+void func::creatNewPerson() {
 	system("cls");
 	cout << "введите количество студентов:";
 	int f;
@@ -18,77 +18,208 @@ func func::creatNewPerson() {
 
 		cout << "им€:";
 		cin >> name;
-		if ((int)name[0]<48||(int)name[0]>57)
+		if ((int)name[0] <48 || (int)name[0] > 57)
+		{
+			cout << endl;
+
+			cout << "фамили€:";
+			cin >> firstname;
+			if ((int)firstname[0] < 48 || (int)firstname[0] > 57)
+			{
+				cout << endl;
+
+				cout << "очество:";
+				cin >> secondname;
+				if ((int)secondname[0] < 48 || (int)secondname[0] > 57)
+				{
+					cout << endl;
+
+					cout << "страна:";
+					cin >> country;
+					if ((int)country[0] < 48 || (int)country[0] > 57)
+					{
+						cout << endl;
+
+						cout << "город:";
+						cin >> city;
+						if ((int)city[0] < 48 || (int)city[0] > 57)
+						{
+							cout << endl;
+
+							cout << "улица:";
+							cin >> street;
+							if ((int)street[0] < 48 || (int)street[0] > 57)
+							{
+								cout << endl;
+
+								cout << "номер дома:";
+								cin >> numOfHouse;
+								if ((int)numOfHouse[0] > 48 && (int)numOfHouse[0] < 57)
+								{
+									cout << endl;
+									cout << "полную дату рождени€(пример 12 04 2001)" << endl;
+
+									cout << "день:";
+									cin >> day;
+									if ((int)day[0] > 48 && (int)day[0] < 57)
+									{
+										cout << endl;
+										cout << "мес€ц:";
+										cin >> mounth;
+										if ((int)mounth[0] > 48 && (int)mounth[0] < 57)
+										{
+
+											cout << endl;
+
+											cout << "год:";
+											cin >> year;
+											if ((int)year[0] > 48 && (int)year[0] < 57)
+											{
+
+												cout << endl;
+
+												cout << "факультет:";
+												cin >> faculty;
+												if ((int)faculty[0] < 48 || (int)faculty[0] > 57)
+												{
+
+													cout << endl;
+
+													cout << "специальность:";
+													cin >> specialty;
+													if ((int)specialty[0] < 48 || (int)specialty[0] > 57)
+													{
+														cout << endl;
+
+														cout << "курс:";
+														cin >> course;
+														if ((int)course[0] > 48 && (int)course[0] < 57)
+														{
+															cout << endl;
+
+															cout << "группа:";
+															cin >> group;
+															if ((int)group[0] > 48 && (int)group[0] < 57)
+															{
+																cout << endl;
+
+																cout << "человек добавлен в буффер" << endl;
+																system("cls");
+															}
+															else
+															{
+
+																cout << "данные введены некорректно, попробуйте еще раз" << endl;
+																system("pause");
+															}
+
+														}
+														else
+														{
+
+															cout << "данные введены некорректно, попробуйте еще раз" << endl;
+															system("pause");
+														}
+
+													}
+													else
+													{
+
+														cout << "данные введены некорректно, попробуйте еще раз" << endl;
+														system("pause");
+													}
+												}
+												else
+												{
+
+													cout << "данные введены некорректно, попробуйте еще раз" << endl;
+													system("pause");
+												}
+											}
+											else
+											{
+
+												cout << "данные введены некорректно, попробуйте еще раз" << endl;
+												system("pause");
+											}
+										}
+										else
+										{
+
+											cout << "данные введены некорректно, попробуйте еще раз" << endl;
+											system("pause");
+										}
+									}
+									else
+									{
+
+										cout << "данные введены некорректно, попробуйте еще раз" << endl;
+										system("pause");
+									}
+								}
+								else
+								{
+
+									cout << "данные введены некорректно, попробуйте еще раз" << endl;
+									system("pause");
+								}
+
+							}
+							else
+							{
+
+								cout << "данные введены некорректно, попробуйте еще раз" << endl;
+								system("pause");
+							}
+
+
+
+						}
+
+
+
+					}
+					else
+					{
+
+						cout << "данные введены некорректно, попробуйте еще раз" << endl;
+						system("pause");
+					}
+
+
+				}
+				else
+				{
+
+					cout << "данные введены некорректно, попробуйте еще раз" << endl;
+					system("pause");
+				}
+				
+			}
+			else
+			{
+
+				cout << "данные введены некорректно, попробуйте еще раз" << endl;
+				system("pause");
+			}
+			
+
+		}
+		else
 		{
 
-		}
-		else {
-			cout << "данные введены некорректно, попробуйте еще раз"<<endl;
+			cout << "данные введены некорректно, попробуйте еще раз" << endl;
 			system("pause");
-			return creatNewPerson();
 		}
-		cout << endl;
 
-		cout << "фамили€:";
-		cin >> firstname;
-		cout << endl;
-
-		cout << "очество:";
-		cin >> secondname;
-		cout << endl;
-
-		cout << "страна:";
-		cin >> country;
-		cout << endl;
-
-		cout << "город:";
-		cin >> city;
-		cout << endl;
-
-		cout << "улица:";
-		cin >> street;
-		cout << endl;
-
-		cout << "номер дома:";
-		cin >> numOfHouse;
-		cout << endl;
-		cout << "полную дату рождени€(пример 12 04 2001)" << endl;
-
-		cout << "день:";
-		cin >> day;
-		cout << endl;
-		cout << "мес€ц:";
-		cin >> mounth;
-		cout << endl;
-
-		cout << "год:";
-		cin >> year;
-		cout << endl;
-
-		cout << "факультет:";
-		cin >> faculty;
-		cout << endl;
-
-		cout << "специальность:";
-		cin >> specialty;
-		cout << endl;
-
-		cout << "курс:";
-		cin >> course;
-		cout << endl;
-
-		cout << "группа:";
-		cin >> group;
-		cout << endl;
-
-		cout << "человек добавлен в буффер" << endl;
-		system("cls");
+		
 
 
 
 
 
 		date k(name, firstname, secondname, country, city, street, numOfHouse, day, mounth, year, faculty, specialty, course, group);
+	
 	}
 	system("cls");
 }// //
@@ -1352,5 +1483,7 @@ void func::changeinfMenu()
 
 	cout << "12.выход" << endl;
 }
+
+
 
 

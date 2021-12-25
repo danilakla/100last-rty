@@ -5,7 +5,7 @@ class func :protected date
 {
 public:
 	//main manipulate method 
-	func creatNewPerson();
+	void creatNewPerson();
 	void print();
 	void del();
 	void addTofile();
@@ -63,5 +63,7 @@ private:
 	int changechoice();
 	void changeinfMenu();
 
+
+	func stop(string value);
 
 };
